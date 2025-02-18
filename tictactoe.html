@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: #0c0648;
+        }
+        body{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        button{
+            height: 100px;
+            width: 100px;
+            font-size:50px;
+            border: none;
+        }
+        table,tr{
+            border-collapse: collapse;
+            border-top: none;
+            border-left: none;
+            border-bottom: none;
+            border-right: none;
+            margin-top: 40px;
+        }
+        .d{
+            border-bottom: solid rgb(17, 32, 197);
+        }
+        #a{
+            border-right: solid rgb(17, 32, 197);
+        }
+        h1{
+            text-align: center;
+            color: rgb(17, 32, 197);
+        }
+        #f{
+            color: rgb(17, 32, 197);
+        }
+        button{
+            color: rgb(17, 32, 197);
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <table>
+        <tr>
+            <td class = "d" id = "a"><button id = "d1" onclick="s('d1')"></button></td>
+            <td class = "d" id = "a"><button id = "d2" onclick="s('d2')"></button></td>
+            <td class = "d"><button id = "d3" onclick="s('d3')"></button></td>
+        </tr>
+        <tr>
+            <td class = "d" id = "a"><button id = "d4" onclick="s('d4')"></button></td>
+            <td class = "d" id = "a"><button id = "d5" onclick="s('d5')"></button></td>
+            <td class = "d"><button id = "d6" onclick="s('d6')"></button></td>
+        </tr>
+        <tr>
+            <td id = "a"><button id = "d7" onclick="s('d7')"></button></td>
+            <td id = "a"><button id = "d8" onclick="s('d8')"></button></td>
+            <td><button id = "d9" onclick="s('d9')"></button></td>
+        </tr>
+    </table>
+    <h1 id = "f"></h1>
+    <script>
+        let v = 'X';
+        let br = ['d1','d2','d3','d4','d5','d6','d7','d8','d9'];
+        let ar = [['d1','d2','d3'],['d4','d5','d6'],['d7','d8','d9'],
+        ['d1','d4','d7'],['d2','d5','d8'],['d3','d6','d9'],['d1','d5','d9'],['d3','d5','d7']];
+        let b = true;
+        let co = 0;
+        function s(a){
+            let d = document.getElementById(a);
+            if(d.innerText!='X' && d.innerText!='O' && b){
+                d.innerText = v;
+                c();
+            }
+            if(v=='X'){
+                v = 'O';
+            }
+            else{
+                v = 'X'
+            }
+        }
+        function c(){
+            for(let i of ar){
+                let s = "";
+                for(let j of i){
+                    s+=document.getElementById(j).innerText;
+                }
+                if(s=='XXX' || s=='OOO'){
+                    document.querySelector('#f').innerText = v+' wins';
+                    b=false;
+                }
+                for(let i of br){
+                    if(document.getElementById(i).innerText=='X' || document.getElementById(i).innerText=='O'){
+                        co++;
+                    }
+                }
+                if(co==9){
+                    document.querySelector('#f').innerText = 'DRAW';
+                }
+                co=0;
+            }
+        }
+    </script>
+</body>
+</html>
