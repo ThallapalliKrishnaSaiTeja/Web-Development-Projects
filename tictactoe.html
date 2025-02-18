@@ -8,12 +8,6 @@
         *{
             background-color: #0c0648;
         }
-        body{
-            display: flex;
-            justify-items: center;
-            align-items: center;
-            flex-direction: column;
-        }
         button{
             height: 100px;
             width: 100px;
@@ -26,13 +20,18 @@
             border-left: none;
             border-bottom: none;
             border-right: none;
-            margin-top: 40px;
+            margin-left: 39.7%;
         }
         .d{
             border-bottom: solid rgb(17, 32, 197);
         }
         #a{
             border-right: solid rgb(17, 32, 197);
+        }
+        #hi{
+            text-align: center;
+            color: rgb(17, 32, 197);
+            margin-left: 7%;
         }
         h1{
             text-align: center;
@@ -44,10 +43,15 @@
         button{
             color: rgb(17, 32, 197);
         }
+        #bh{
+            float: right;
+            font-size:medium;
+        }
     </style>
 </head>
 <body>
-    <h1>Tic-Tac-Toe</h1>
+    <button type="button" id = 'bh' onclick="reset()">RESET</button>
+    <h1 id="hi">Tic-Tac-Toe</h1>
     <table>
         <tr>
             <td class = "d" id = "a"><button id = "d1" onclick="s('d1')"></button></td>
@@ -106,6 +110,13 @@
                 }
                 co=0;
             }
+        }
+        function reset(){
+            for(let i of br){
+                document.getElementById(i).innerText = '';
+            }
+            document.querySelector('#f').innerText = '';
+            b = true;
         }
     </script>
 </body>
