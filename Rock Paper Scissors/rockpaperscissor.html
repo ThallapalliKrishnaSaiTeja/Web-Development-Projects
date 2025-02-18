@@ -1,0 +1,140 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style rel="stylesheet" href=""></style>
+        <style>
+            *{
+                background-color: bisque;
+            }
+            h1{
+                text-align: center;
+                padding: 20px;
+            }
+            div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            }
+            table,tr,td{
+                font-weight: bold;
+                width: 20%;
+                text-align: center;
+                font-size: large;
+                margin-top: 9%;
+            }
+            img{
+                height: 200px;
+                width: 200px;
+                margin:10px;
+                border-radius: 100%;
+                border: 5px solid bisque;
+            }
+            h2{
+                text-align: center;
+            }
+            #uc,#cc{
+                height: 0;
+                width: 0;
+                visibility: hidden;
+            }
+            #ch{
+                margin-left: auto;
+                margin-right: auto; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Rock Paper Scissors</h1>
+        <button type="button" style="float: right;border: none;" onclick="reset()">RESET</button>
+        <div>
+            <img src="rock.png" id = 'i1' onclick="s('i1')" style="margin-left: 75px;">
+
+            <img src="paper.png" id = 'i2' onclick="s('i2')" >
+            <img src="scissor.png" id = 'i3' onclick="s('i3')">
+        </div>
+        <div id = 'ch'>
+        <img id = 'uc' alt="">
+        <table>
+            <tr>
+                <td id = 'u'>0</td>
+                <td id = 'c'>0</td>
+            </tr>
+            <tr>
+                <td>User</td>
+                <td>Computer</td>
+            </tr>
+        </table>
+        <img id="cc" alt="">
+        </div>
+        <h2 id = 'd'></h2>
+        <h2 id = 'r'></h2>
+        <script>
+            let di = {'i1':'rock','i2':'paper','i3':'scissor'};
+            let userc =  '';
+            let compc =  '';
+            let userm = 0;
+            let compm = 0;
+            function s(a){
+                if(userm===3 || compm==3){ 
+                    document.getElementById('r').innerText = userm==3?'You win!':'Computer wins, you lose!';
+                    return;
+                }
+                let d = document.getElementById(a);
+                d.style.border = "5px solid black";
+                d.style.borderRadius = "100%";
+                userc = di[a];
+                compc = di[['i1','i2','i3'][Math.floor(Math.random()*3)]];
+                document.getElementById('uc').style.height = "200px";
+                document.getElementById('uc').style.width = "200px";
+                document.getElementById('cc').style.height = "200px";
+                document.getElementById('cc').style.width = "200px";
+                document.getElementById('uc').style.visibility = "visible";
+                document.getElementById('cc').style.visibility = "visible";
+                document.getElementById('uc').src = `${userc}.png`; 
+                document.getElementById('cc').src = `${compc}.png`;
+                setTimeout(()=>{
+                    d.style.border = "";
+                    d.style.borderRadius = "";
+                },100)
+                win(userc,compc);
+                if (userm == 3 || compm == 3) { 
+                    document.getElementById('r').innerText = userm == 3 ? "You win!" : "Computer wins, you lose!";
+                }
+            }
+            function win(userc,compc){
+                let te = '';
+                if(userc == compc){
+                    te = "It's a tie";
+                }
+                else if((userc=='paper' && compc=='rock') || (userc=='rock' && compc=='scissor') || (userc=='scissor' && compc=='paper')){
+                    te = `${userc} beats ${compc}`;
+                    userm++;
+                    document.getElementById('u').innerText=userm;
+                }
+                else{
+                    te = `${compc} beats ${userc}`;
+                    compm++;
+                    document.getElementById('c').innerText=compm;
+                }
+                document.getElementById('d').innerText = te;   
+            }
+            function reset(){
+                userm = 0;
+                compm = 0;
+                document.getElementById('u').innerText = userm;
+                document.getElementById('c').innerText = compm;
+                document.getElementById('r').innerText = "";
+                document.getElementById('d').innerText = "";
+                document.getElementById('uc').src = "";
+                document.getElementById('cc').src = "";
+                document.getElementById('uc').style.height = "0";
+                document.getElementById('uc').style.width = "0";
+                document.getElementById('cc').style.height = "0";
+                document.getElementById('cc').style.width = "0";
+            }
+        </script>
+    </body>
+    </html>
