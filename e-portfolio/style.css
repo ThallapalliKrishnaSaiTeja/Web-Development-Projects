@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080808;
+    color: #fff;
+}
+.h:hover{
+    color: red;
+}
+.head{
+    padding: 1rem;
+    height: 100vh;
+    width: 100vw;
+}
+#d{
+    line-height: 3vh;
+}
+.name{
+    display: inline-flex;
+    padding-left: 3rem;
+    font-size: x-large;
+}
+.nav,li{
+    display: inline-flex;
+    list-style: none;
+    padding-right: 3rem;
+}
+.navi{
+    float: right;
+}
+.intro{
+    position: relative;
+    padding-top: 18rem;
+    padding-left: 3rem;
+    font-size: 3rem;
+}
+.ab{
+    position: relative;
+    display: inline-flex;
+}
+.a:hover{
+    color: blue;
+}
+.service:hover{
+    background-color: rgb(203, 114, 114);
+}
+.profile{
+    height: 55vh;
+    width: 20vw;
+}
+.about{
+    position: relative;
+    padding-top: 23vh;
+    height: 100vh;
+    width: 100vw;
+    padding-left: 4rem;
+}
+.aboutme{
+    position: relative;
+    padding-left: 4vw;
+    width: 65vw;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.skill{
+    display: inline-flex;
+    list-style: none;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+.service{
+    position: relative;
+    background-color: gray;
+    height: 30vh;
+    width: 20vw;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-right: 2vw;
+}
+.service:hover{
+    transform: scale(1.05);
+}
+.project{
+    display: inline-flex;
+}
+.contact{
+    position: relative;
+    padding-top: 35vh;
+    height: 100vh;
+    width: 100vw;
+    text-align: left;
+}
+.de{
+    padding-bottom: 1rem;
+}
+.de1{
+    font-size: 1.2rem;
+}
