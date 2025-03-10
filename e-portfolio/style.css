@@ -11,6 +11,14 @@ body{
 .h:hover{
     color: red;
 }
+.navigation{
+    padding: 1rem;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    background-color: #080808;
+    z-index: 1;
+}
 .head{
     padding: 1rem;
     height: 100vh;
@@ -44,9 +52,6 @@ body{
 }
 .a:hover{
     color: blue;
-}
-.service:hover{
-    background-color: rgb(203, 114, 114);
 }
 .profile{
     height: 55vh;
@@ -85,15 +90,19 @@ a{
 .service{
     position: relative;
     background-color: gray;
-    height: 38vh;
+    height: 39vh;
     width: 20vw;
     border-radius: 1rem;            
     padding: 1rem;
     margin-bottom: 2vw;
     margin-right: 2vw;
 }
+.bu:hover{
+    background-color: rgb(203, 114, 114);
+}
 .service:hover{
     transform: scale(1.05);
+    background-color: rgb(203, 114, 114);
 }
 .project{
     display: flex;
@@ -114,7 +123,6 @@ a{
     font-size: 1.2rem;
 }
 .proj{
-
     font-size: 1.8rem; 
     color: black;
 }
