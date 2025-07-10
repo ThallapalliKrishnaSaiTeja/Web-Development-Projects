@@ -1,102 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thallapalli Krishna Sai Teja</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script src="ks.js"></script>
 </head>
 <body>
-    <div class="navigation">
-        <div class = "name">
-            <span style="color: red;">T</span>hallapalli Krishna Sai Teja
-        </div>
-        <div class = "navi">
-            <ul class = "nav">
-                <li><a href ="#home" class = "h">Home</a></li>
-                <li><a href="#about" class = "h">About</a></li>
-                <li><a href="#projects" class = "h">Projects</a></li>
-                <li><a href="#contact" class = "h">Contact</a></li>
-            </ul>
-        </div>
+
+  <nav class="navigation">
+    <div class="nav-container">
+      <div class="name">
+        <span style="color: red;">T</span>hallapalli Krishna Sai Teja
+      </div>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav" id="nav-menu">
+        <li><a href="#home" class="h">Home</a></li>
+        <li><a href="#about" class="h">About</a></li>
+        <li><a href="#projects" class="h">Projects</a></li>
+        <li><a href="#contact" class="h">Contact</a></li>
+      </ul>
     </div>
-    <div class = "head" id = "home">
-        <div class = "intro">
-            Hi, I'm <span style="color: red;">Thallapalli Krishna <br> Sai Teja</span> from Hyderbad.<br> 
-            <a href="KRISHNA SAI TEJA RESUME.pdf" download><button style="font-size: 2rem;margin-top: 2rem;" class = "bu">Download CV</button></a>
-        </div>
+  </nav>
+
+  <div class="head" id="home">
+    <div class="intro">
+      Hi, I'm <span style="color: red;">Thallapalli Krishna <br />Sai Teja</span> from Hyderabad.<br />
+      <a href="KRISHNA SAI TEJA RESUME.pdf" download>
+        <button class="bu">Download CV</button>
+      </a>
     </div>
-    <div class = "about" id = "about">
-        <div class = "ab">
-            <img src="Krishna Sai.jpeg" class = "profile">
-            <div class = "aboutme">
-                <h1 style="padding-bottom: 0.5rem;">About Me</h1>
-                <p>Software engineering student with a strong foundation in programming, algorithms, and web development.
-                    Proficient in Python and Java, with experience in project development and management. Skilled in team
-                    collaboration, leading projects, and adapting to new technologies. Focused on designing scalable and efficient
-                    software solutions.</p>
-                <ul class = "skill">
-                    <li><a href = "javascript:skills();" class = "h">Skills</a></li>
-                    <li><a href = "javascript:education();" class = "h">Education</a></li>  
-                </ul>
-                <p id = "d"></p>
-            </div>
-        </div>
+  </div>
+
+  <div class="about" id="about">
+    <div class="ab">
+      <img src="Krishna Sai.jpeg" class="profile" />
+      <div class="aboutme">
+        <h1>About Me</h1>
+        <p>
+          Software engineering student with a strong foundation in programming,
+          algorithms, and web development. Proficient in Python and Java, with
+          experience in project development and management. Skilled in team
+          collaboration, leading projects, and adapting to new technologies.
+          Focused on designing scalable and efficient software solutions.
+        </p>
+        <ul class="skill" type="none">
+          <li><a href="javascript:skills();" class="h">Skills</a></li>
+          <li><a href="javascript:education();" class="h">Education</a></li>
+        </ul>
+        <p id="d"></p>
+      </div>
     </div>
-    <div class = "pro" id = "projects">
-        <h1 style="padding-bottom: 1rem;padding-top: 2.5rem;">My Projects</h1>
-        <div class = "project">
-            <div class = "service">
-                <p class="proj">Rock Paper Scissors</p>
-                <p>Built an interactive Rock-Paper-Scissors game using HTML, CSS, and JavaScript.
-                    Integrated real-time winner detection logic and score-tracking functionality.
-                    Optimized the user experience by adding a seamless replay feature.<br>
-                   <span style="color: black;">GitHub Repository:</span> <a href="https://github.com/ThallapalliKrishnaSaiTeja/Web-Development-Projects/tree/main/Rock%20Paper%20Scissors" target="_blank" class = "a">Rock Paper Scissors</a></p>
-            </div>
-            <div class = "service">
-                <p class="proj">Tic Tac Toe</p>
-                <p>Pioneered a Tic-Tac-Toe web application, leveraging HTML, CSS, and JavaScript.
-                    Designed automatic winner detection and reset functionality.
-                    Implemented a game reset mechanism in Tic-Tac-Toe, enabling a smooth restart without page reload.<br>
-                    <span style="color: black;">GitHub Repository:</span> <a href="https://github.com/ThallapalliKrishnaSaiTeja/Web-Development-Projects/tree/main/TicTacToe" target="_blank" class = "a">Tic Tac Toe</a></p>
-            </div>
-            <div class = "service">
-                <p class="proj">Amazon Clone</p>
-                <p>Constructed a functional Amazon homepage replicate, employing HTML and CSS to mirror the original
-                    design.
-                    Structured and styled navigation bars, product sections, and footers for improved UX.
-                    Enhanced UI aesthetics with custom CSS styles and interactive elements.<br>
-                    <span style="color: black;">GitHub Repository:</span> <a href="https://github.com/ThallapalliKrishnaSaiTeja/Web-Development-Projects/tree/main/Amazon%20Clone" target="_blank" class = "a">Amazon Clone</a></p>
-            </div> 
-            <div class = "service">
-                <p class="proj">Mutual Management System</p>
-                <p>Developed a Java-based application following industry-standard software engineering practices.
-                    Implemented optimized data processing algorithms to enhance connection recommendations.
-                    Designed and deployed a user-friendly interface supporting real-time engagement tracking.<br>
-                    <span style="color: black;">GitHub Repository:</span> <a href="https://github.com/ThallapalliKrishnaSaiTeja/Management-System-with-Java/blob/main/MutualManagementSystem.java" target="_blank" class = "a">Mutual Management System</a></p>
-            </div> <br>
-            <div class = "service">
-                <p class="proj">File Management System</p>
-                <p>Engineered a data-driven software solution for secure file storage and retrieval.
-                    Integrated structured file organization using Python programming and sequential file allocation.
-                    Enhanced data accessibility and security through collaborative access management techniques.<br>
-                    <span style="color: black;">GitHub Repository:</span> <a href="https://github.com/ThallapalliKrishnaSaiTeja/Management-System-with-Python/blob/main/FileManagementSystem.py" target="_blank" class = "a">File Management System</a></p>
-            </div>
-        </div>
+  </div>
+
+  <div class="pro" id="projects">
+    <h1>My Projects</h1>
+    <div class="project">
+      <div class="service">
+        <p class="proj">Rock Paper Scissors</p>
+        <p>
+          Built an interactive Rock-Paper-Scissors game using HTML, CSS, and
+          JavaScript.<br />
+          <span style="color: black;">GitHub Repository:</span>
+          <a
+            href="https://github.com/ThallapalliKrishnaSaiTeja/Web-Development-Projects/tree/main/Rock%20Paper%20Scissors"
+            target="_blank"
+            class="a"
+            >Rock Paper Scissors</a
+          >
+        </p>
+      </div>
+      <div class="service">
+        <p class="proj">Tic Tac Toe</p>
+        <p>
+          Pioneered a Tic-Tac-Toe web application leveraging HTML, CSS, and
+          JavaScript.<br />
+          <span style="color: black;">GitHub Repository:</span>
+          <a
+            href="https://github.com/ThallapalliKrishnaSaiTeja/Web-Development-Projects/tree/main/TicTacToe"
+            target="_blank"
+            class="a"
+            >Tic Tac Toe</a
+          >
+        </p>
+      </div>
+      <div class="service">
+        <p class="proj">Amazon Clone</p>
+        <p>
+          Constructed a functional Amazon homepage replicate using HTML and CSS.<br />
+          <span style="color: black;">GitHub Repository:</span>
+          <a
+            href="https://github.com/ThallapalliKrishnaSaiTeja/Web-Development-Projects/tree/main/Amazon%20Clone"
+            target="_blank"
+            class="a"
+            >Amazon Clone</a
+          >
+        </p>
+      </div>
+      <div class="service">
+        <p class="proj">Mutual Management System</p>
+        <p>
+          Developed a Java-based application following software engineering
+          practices.<br />
+          <span style="color: black;">GitHub Repository:</span>
+          <a
+            href="https://github.com/ThallapalliKrishnaSaiTeja/Management-System-with-Java/blob/main/MutualManagementSystem.java"
+            target="_blank"
+            class="a"
+            >Mutual Management System</a
+          >
+        </p>
+      </div>
+      <div class="service">
+        <p class="proj">File Management System</p>
+        <p>
+          Engineered a Python-based solution for secure file storage.<br />
+          <span style="color: black;">GitHub Repository:</span>
+          <a
+            href="https://github.com/ThallapalliKrishnaSaiTeja/Management-System-with-Python/blob/main/FileManagementSystem.py"
+            target="_blank"
+            class="a"
+            >File Management System</a
+          >
+        </p>
+      </div>
     </div>
-    <div class = "contact" id = "contact">
-        <center>
-        <div>
-            <h1 class = "de">Contact Me</h1>
-            <p class = "de"><i class="fa-solid fa-paper-plane"></i><a href="mailto: tallapallykrishnasaiteja@gmail.com" target="_blank"> tallapallykrishnasaiteja@gmail.com</a></p>
-            <p class = "de"><i class="fa-solid fa-phone"></i> <a href="tel:+91 7396228384" target="_blank"> +91 7396228384</a></p>
-            <p class = "de"><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/krishna-sai-teja-thallapalli-b2a397286/" target="_blank"> Krishna Sai Teja Thallapalli</a></p>
-            <p class = "de1"><a href="https://github.com/ThallapalliKrishnaSaiTeja"><i class="fa-brands fa-github"></i></a> <a href="https://www.hackerrank.com/profile/tallapallykrish1" target="_blank"><i class="fa-brands fa-hackerrank"></i></a>
-                <a href="https://www.codechef.com/users/krisate" target="_blank"><i class="fa-solid fa-closed-captioning"></i></a><a href="https://leetcode.com/u/sreekrishu/" target="_blank"></a></p>
-        </div>
-        </center>
-    </div>
-    <script src="ks.js"></script>
+  </div>
+
+  <div class="contact" id="contact">
+    <center>
+      <div>
+        <h1 class="de">Contact Me</h1>
+        <p class="de">
+          <i class="fa-solid fa-paper-plane"></i>
+          <a href="mailto:tallapallykrishnasaiteja@gmail.com" target="_blank"
+            >tallapallykrishnasaiteja@gmail.com</a
+          >
+        </p>
+        <p class="de">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+91 7396228384" target="_blank">+91 7396228384</a>
+        </p>
+        <p class="de">
+          <i class="fa-brands fa-linkedin"></i>
+          <a
+            href="https://www.linkedin.com/in/krishna-sai-teja-thallapalli-b2a397286/"
+            target="_blank"
+            >Krishna Sai Teja Thallapalli</a
+          >
+        </p>
+        <p class="de1">
+          <a
+            href="https://github.com/ThallapalliKrishnaSaiTeja"
+            target="_blank"
+            ><i class="fa-brands fa-github"></i></a
+          >
+          <a
+            href="https://www.hackerrank.com/profile/tallapallykrish1"
+            target="_blank"
+            ><i class="fa-brands fa-hackerrank"></i></a
+          >
+          <a
+            href="https://www.codechef.com/users/krisate"
+            target="_blank"
+            ><i class="fa-solid fa-closed-captioning"></i></a
+          >
+        </p>
+      </div>
+    </center>
+  </div>
 </body>
 </html>
