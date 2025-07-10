@@ -1,131 +1,232 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', sans-serif;
 }
-body{
+
+body {
+  background-color: #080808;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navigation {
+  width: 100%;
+  background-color: #080808;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  font-size: 1.8rem;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav li a {
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav li a:hover {
+  color: red;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.intro {
+  font-size: 2.8rem;
+  margin: 1rem;
+}
+
+.bu {
+  margin-top: 2rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.2rem;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bu:hover {
+  background-color: rgb(203, 114, 114);
+}
+
+.about {
+  padding: 4rem 2rem;
+}
+
+.ab {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.aboutme {
+  max-width: 700px;
+  width: 100%;
+}
+
+.aboutme h1 {
+  margin-bottom: 1rem;
+}
+
+.skill {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.skill li a:hover {
+  color: red;
+}
+
+#d {
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.pro {
+  padding: 4rem 2rem;
+}
+
+.pro h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service {
+  background-color: gray;
+  color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  max-width: 300px;
+  width: 100%;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.service:hover {
+  transform: scale(1.05);
+  background-color: rgb(203, 114, 114);
+}
+
+.proj {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.contact {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.de, .de1 {
+  margin: 0.8rem 0;
+}
+
+.de1 i {
+  margin: 0 0.8rem;
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.de1 i:hover {
+  color: red;
+}
+
+/* RESPONSIVE STYLES */
+
+@media (max-width: 480px) {
+  .intro {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
     background-color: #080808;
-    color: #fff;
-}
-.h:hover{
-    color: red;
-}
-.navigation{
     padding: 1rem;
-    width: 100vw;
-    position: sticky;
-    top: 0;
-    background-color: #080808;
-    z-index: 1;
-}
-.head{
-    padding: 1rem;
-    height: 100vh;
-    width: 100vw;
-}
-#d{
-    line-height: 3vh;
-}
-.name{
-    display: inline-flex;
-    padding-left: 3rem;
-    font-size: x-large;
-}
-.nav,li{
-    display: inline-flex;
-    list-style: none;
-    padding-right: 3rem;
-}
-.navi{
-    float: right;
-}
-.intro{
-    position: relative;
-    padding-top: 18rem;
-    padding-left: 3rem;
-    font-size: 3rem;
-}
-.ab{
-    position: relative;
-    display: inline-flex;
-}
-.a:hover{
-    color: blue;
-}
-.profile{
-    height: 55vh;
-    width: 20vw;
-}
-.about{
-    position: relative;
-    padding-top: 23vh;
-    height: 100vh;
-    width: 100vw;
-    padding-left: 4rem;
-}
-.aboutme{
-    position: relative;
-    padding-left: 4vw;
-    width: 65vw;
-}
-a{
-    text-decoration: none;
-    color: white;
-}
-.skill{
-    display: inline-flex;
-    list-style: none;
-    padding-top: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-}
-.pro{
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    padding-left: 4rem;
-    padding-top: 1rem;
-}
-.service{
-    position: relative;
-    background-color: gray;
-    height: 39vh;
-    width: 20vw;
-    border-radius: 1rem;            
-    padding: 1rem;
-    margin-bottom: 2vw;
-    margin-right: 2vw;
-}
-.bu:hover{
-    background-color: rgb(203, 114, 114);
-}
-.service:hover{
-    transform: scale(1.05);
-    background-color: rgb(203, 114, 114);
-}
-.project{
+  }
+
+  .nav.show {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  }
+
+  .aboutme h1 {
+    text-align: center;
+  }
+
+  .head, .about, .pro, .contact {
+    height: auto;
+  }
 }
-.contact{
-    position: relative;
-    padding-top: 35vh;
-    height: 100vh;
-    width: 100vw;
-    text-align: left;
+
+img {
+  max-width: 100%;
+  height: auto;
 }
-.de{
-    padding-bottom: 1rem;
-}
-.de1{
-    font-size: 1.2rem;
-}
-.proj{
-    font-size: 1.8rem; 
-    color: black;
-}
-.r{
-    float: right;
+
+html, body {
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
