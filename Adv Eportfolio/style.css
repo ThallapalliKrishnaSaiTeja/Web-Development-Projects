@@ -1,0 +1,621 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+  background-color: #080808;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navigation {
+  width: 100%;
+  background-color: #080808;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid #333;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  font-size: 1.8rem;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav li a {
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav li a:hover {
+  color: red;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.intro {
+  font-size: 2.8rem;
+  margin: 1rem;
+}
+
+.bu {
+  margin-top: 2rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.2rem;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bu:hover {
+  background-color: rgb(203, 114, 114);
+}
+
+.about {
+  padding: 4rem 2rem;
+  min-height: auto;
+}
+
+.ab {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.aboutme {
+  max-width: 700px;
+  width: 100%;
+}
+
+.aboutme h1 {
+  margin-bottom: 1rem;
+}
+
+.education {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+#d {
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* Experience Section */
+.experience {
+  padding: 4rem 2rem;
+  min-height: auto;
+}
+
+.experience h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.experience-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-item {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 2rem;
+  border-left: 4px solid red;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.1);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.experience-header h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.experience-period {
+  color: red;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.experience-role {
+  color: #ccc;
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.experience-details {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-details li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.experience-details li:before {
+  content: "▸";
+  color: red;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 4rem 2rem;
+  min-height: auto;
+  background-color: #0a0a0a;
+}
+
+.skills-section h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-category h3 i {
+  color: red;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background-color: #333;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid #555;
+  transition: all 0.3s;
+}
+
+.skill-tag:hover {
+  background-color: red;
+  border-color: red;
+  transform: scale(1.05);
+}
+
+.pro {
+  padding: 4rem 2rem;
+  min-height: auto;
+}
+
+.pro h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service {
+  background-color: gray;
+  color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  max-width: 300px;
+  width: 100%;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service:hover {
+  transform: scale(1.05);
+  background-color: rgb(203, 114, 114);
+}
+
+.proj {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.contact {
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: auto;
+}
+
+.de, .de1 {
+  margin: 0.8rem 0;
+}
+
+.de1 i {
+  margin: 0 0.8rem;
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.de1 i:hover {
+  color: red;
+}
+
+/* RESPONSIVE STYLES */
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .intro {
+    font-size: 3.2rem;
+  }
+  
+  .project {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .navigation {
+    padding: 1rem;
+  }
+  
+  .name {
+    font-size: 1.5rem;
+  }
+  
+  .intro {
+    font-size: 2.5rem;
+  }
+  
+  .ab {
+    gap: 2rem;
+  }
+  
+  .aboutme {
+    max-width: 600px;
+  }
+  
+  .experience h1, .skills-section h1 {
+    font-size: 2.2rem;
+  }
+  
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Small tablets */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: #080808;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  
+  .nav li {
+    border-bottom: 1px solid #333;
+  }
+  
+  .nav li:last-child {
+    border-bottom: none;
+  }
+  
+  .nav li a {
+    display: block;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s;
+  }
+  
+  .nav li a:hover {
+    background-color: #333;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+  
+  .nav-container {
+    position: relative;
+  }
+
+  .intro {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+  
+  .head {
+    padding: 1rem;
+    height: 80vh;
+  }
+  
+  .about, .experience, .skills-section, .pro, .contact {
+    padding: 3rem 1rem;
+  }
+  
+  .ab {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profile {
+    max-width: 250px;
+  }
+
+  .aboutme h1 {
+    text-align: center;
+  }
+  
+  .education {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .project {
+    gap: 1.5rem;
+  }
+  
+  .service {
+    max-width: 100%;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .navigation {
+    padding: 0.8rem 1rem;
+  }
+  
+  .name {
+    font-size: 1.2rem;
+  }
+  
+  .menu-toggle {
+    font-size: 1.5rem;
+  }
+  
+  .intro {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin: 0.5rem;
+  }
+  
+  .bu {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .head {
+    min-height: 70vh;
+    padding: 0.5rem;
+  }
+  
+  .about, .experience, .skills-section, .pro, .contact {
+    padding: 2rem 1rem;
+  }
+  
+  .experience h1, .skills-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .experience-item {
+    padding: 1.5rem;
+  }
+  
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .skill-category {
+    padding: 1.2rem;
+  }
+  
+  .profile {
+    max-width: 200px;
+  }
+  
+  .aboutme {
+    max-width: 100%;
+  }
+  
+  .aboutme h1 {
+    font-size: 1.8rem;
+  }
+  
+  .aboutme p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .education {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .pro h1 {
+    font-size: 1.8rem;
+  }
+  
+  .service {
+    padding: 1.2rem;
+  }
+  
+  .proj {
+    font-size: 1.3rem;
+  }
+  
+  .service p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .contact h1 {
+    font-size: 1.8rem;
+  }
+  
+  .de {
+    font-size: 0.95rem;
+    margin: 0.6rem 0;
+  }
+  
+  .de1 i {
+    font-size: 1.3rem;
+    margin: 0 0.6rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+  .intro {
+    font-size: 1.5rem;
+  }
+  
+  .name {
+    font-size: 1rem;
+  }
+  
+  .bu {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .aboutme h1, .experience h1, .skills-section h1, .pro h1, .contact h1 {
+    font-size: 1.5rem;
+  }
+  
+  .proj {
+    font-size: 1.1rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
